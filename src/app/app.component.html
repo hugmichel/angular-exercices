@@ -1,0 +1,38 @@
+<mat-card>
+  <mat-card-title>Task 1</mat-card-title>
+  <mat-form-field appearance="fill">
+    <mat-label>{{label}}</mat-label>
+    <input matInput
+           name="myInput"
+           [ngModel]="input"
+           (ngModelChange)="onInputChange($event)">
+  </mat-form-field>
+</mat-card>
+<mat-card>
+  <mat-card-title>Task 2</mat-card-title>
+  <mat-tab-group>
+    <mat-tab label="First tab">
+      <mat-grid-list cols="2" rowHeight="5:1">
+        <mat-grid-tile>Cell 1</mat-grid-tile>
+        <mat-grid-tile>Cell 2</mat-grid-tile>
+        <mat-grid-tile>Cell 3</mat-grid-tile>
+        <mat-grid-tile>Cell 4</mat-grid-tile>
+      </mat-grid-list>
+    </mat-tab>
+    <mat-tab label="Second tab">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porta mollis commodo. In in faucibus ligula, nec
+      convallis purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pharetra gravida convallis. Nam
+      facilisis non justo sed volutpat. Vestibulum congue sapien at egestas vulputate. Nullam eleifend leo metus, ac
+      hendrerit dolor tempor sed. Nulla facilisi. Praesent nec erat viverra lorem maximus finibus. Aenean at condimentum
+      nulla, in sollicitudin justo. Phasellus pulvinar augue sit amet lorem auctor, nec aliquam sem scelerisque.
+      Curabitur consequat finibus consequat. Nam commodo venenatis massa nec mattis. Fusce eu eros ut erat placerat
+      sodales. Aenean hendrerit urna a bibendum tincidunt.
+    </mat-tab>
+  </mat-tab-group>
+</mat-card>
+<mat-card>
+  <mat-card-title>Task 3</mat-card-title>
+  <mat-card-content>
+    <p [style]="'color:' + ((label|stringValidate) !== 'validated' ? 'red': 'green')">{{label|stringValidate}}</p>
+  </mat-card-content>
+</mat-card>
